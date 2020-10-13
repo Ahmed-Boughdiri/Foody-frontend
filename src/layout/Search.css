@@ -1,19 +1,13 @@
 
-.search-results {
-    width: fit-content;
-    max-width: 900px;
+.search {
+    width: 100vw;
     display: block;
-    margin: 100px auto 0;
-} 
+    padding-top: 60px;
+}
 .search-results-container {
     width: 100%;
-    display: flex;
-}
-.card {
+    max-width: 950px;
+    margin: 50px auto;
     display: block;
-    float: left;
-    width: 280px;
-    height: 350px !important;
-    margin: 0 15px;
-    margin-bottom: 30px;
 }
+

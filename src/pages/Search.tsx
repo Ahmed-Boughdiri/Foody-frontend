@@ -3,25 +3,19 @@ import "../layout/Search.css";
 import SearchBar from "../components/SearchBar";
 import Card from "../components/Card";
 import { foodList } from "../global/Food";
+import Footer from "../components/Footer";
+
 
 const Search = () => {
   return (
-    <div>
+    <div className="search">
       <SearchBar />
-      <div className="search-results">
-        <div className="search-results.conatiner">
-            {foodList.map((food) => (
-                <div className="card">
-                    <Card
-                    name={food.name}
-                    image={food.name}
-                    desc={food.desc}
-                    key={food.id}
-                    />
-                </div>
-            ))}
-        </div>
+      <div className="search-results-container">
+        {
+          foodList.map(food =><Card name={food.name} desc={food.desc} image={food.image} />)
+        }
       </div>
+      {/* <Footer /> */}
     </div>
   );
 };

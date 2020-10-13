@@ -10,7 +10,7 @@
 .wrapper {
     margin-top: 80px;
     margin-bottom: 80px;
-    transform: translateY(15%);
+    transform: translateY(30%);
 }
 
 .form-signin {
@@ -19,6 +19,7 @@
     margin: 0 auto;
     background-color: #fff;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 .form-signin h2 {
     font-family: 'Roboto', sans-serif;
@@ -52,6 +53,9 @@
     margin-bottom: 20px;
 }
 .input {
+    width: 90%;
+    height: 45px;
+    margin-bottom: 10px !important;
     border: 1px solid rgba(0, 0, 0, 0.1) !important;
     border-radius: 5px !important;
     padding-left: 20px !important;
@@ -66,4 +70,9 @@
 .form-btn {
     transition: background 0.5s ease;
     background: #e67d0d;
+    width: 90% !important;
+    height: 40px;
+    margin-top: 0px;
+    color: #fff;
+    font-size: 18px;
 }

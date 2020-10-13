@@ -1,7 +1,5 @@
 import React from "react";
 import "../layout/Home.css";
-import 'materialize-css';
-import 'materialize-css/dist/css/materialize.min.css';
 
 const Home = () => {
   return (

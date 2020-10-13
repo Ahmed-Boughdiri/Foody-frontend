@@ -19,12 +19,15 @@
 }
 button {
   border: 0;
+  outline: none;
+  cursor: pointer;
 }
 a {
   text-decoration: none;
 }
 input {
   border: 0;
+  outline: none;
 }
 
 .App-header {

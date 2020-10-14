@@ -1,6 +1,7 @@
 import React from "react";
 import "../layout/Logout.css";
 import SearchBar from "../components/SearchBar";
+import "../mobile/Logout.css";
 
 const Logout = () => {
   return (

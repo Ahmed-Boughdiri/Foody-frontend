@@ -1,7 +1,8 @@
 import React from "react";
 import "../layout/Home.css";
+import "../mobile/Home.css";
 
-const Home = () => {
+const Home:React.FC<any> = ({ history }) => {
   return (
     <div className="home">
       <div className="home-des">
@@ -12,8 +13,8 @@ const Home = () => {
           tempora. Ut sunt nemo aliquam eligendi iure a saepe voluptates.
         </p>
         <div className="btns">
-            <button className="home-btn z-depth-1">Get Started</button>
-            <button className="home-btn">Register</button>
+            <button className="home-btn" onClick={() =>history.push("/login")}>Get Started</button>
+            <button className="home-btn" onClick={() =>history.push("/register")}>Register</button>
         </div>
       </div>
     </div>

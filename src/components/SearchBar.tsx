@@ -4,6 +4,8 @@ import SearchIcon from '@material-ui/icons/Search';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import LocalShippingIcon from '@material-ui/icons/LocalShipping';
 import PersonIcon from '@material-ui/icons/Person';
+import MenuIcon from '@material-ui/icons/Menu';
+import "../mobile/SearchBar.css";
 
 const SearchBar = () =>{
   return(
@@ -28,6 +30,9 @@ const SearchBar = () =>{
           <div className="search-bar-icon">
             <PersonIcon />
           </div>
+        </div>
+        <div className="burger-menu">
+          <MenuIcon style={{height: "100%",width: "100%",color: "#fff"}} />
         </div>
       </div>
     </div>

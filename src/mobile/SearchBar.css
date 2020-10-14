@@ -1,0 +1,20 @@
+
+@media only screen and (max-width: 900px) {
+    .logo {
+        display: none;
+    }
+    .search-input {
+        width: 75%;
+    }
+    .right-side {
+        display: none;
+    }
+    .burger-menu {
+        display: block;
+        height: 40px;
+        width: 40px;
+        margin-right: 3%;
+        box-sizing: border-box;
+        padding: 3px;
+    }
+}

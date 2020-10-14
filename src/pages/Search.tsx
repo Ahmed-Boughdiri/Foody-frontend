@@ -3,8 +3,6 @@ import "../layout/Search.css";
 import SearchBar from "../components/SearchBar";
 import Card from "../components/Card";
 import { foodList } from "../global/Food";
-import Footer from "../components/Footer";
-
 
 const Search = () => {
   return (
@@ -15,7 +13,6 @@ const Search = () => {
           foodList.map(food =><Card name={food.name} desc={food.desc} image={food.image} />)
         }
       </div>
-      {/* <Footer /> */}
     </div>
   );
 };

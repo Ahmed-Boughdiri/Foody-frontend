@@ -2,6 +2,7 @@ import React from "react";
 import "../layout/Card.css";
 import { Avatar } from '@material-ui/core';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import "../mobile/Card.css";
 
 const Card: React.FC<any> = ({ name, image, desc }) => {
   return (

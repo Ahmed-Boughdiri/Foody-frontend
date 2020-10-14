@@ -1,0 +1,20 @@
+@media only screen and (max-width: 900px) {
+    .home-des h2 {
+        font-size: 40px;
+        width: 97%;
+    }
+    .home-des p {
+        font-size: 15px;
+        width: 90%;
+    }
+    .btns {
+        display: block;
+    }
+    .home-btn {
+        width: 80vw;
+    }
+    .home-btn:nth-child(1) {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+}

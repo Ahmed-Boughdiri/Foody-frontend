@@ -72,3 +72,6 @@
     align-items: center;
     color: #fff;
 }
+.burger-menu {
+    display: none;
+}

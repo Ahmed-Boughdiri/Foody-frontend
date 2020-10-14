@@ -1,0 +1,5 @@
+@media only screen and (max-width: 900px) {
+    .wrapper {
+        transform: translateY(-5%);
+    }
+}

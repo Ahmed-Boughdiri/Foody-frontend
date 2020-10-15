@@ -1,18 +1,21 @@
 import React, { useState } from "react";
 import "../layout/Login.css";
 import validate from "../global/Validate";
+import { login } from "../global/Auth";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<any>("");
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async(e: any) => {
     e.preventDefault();
     if (validate(username, email, password)) {
       return setError(validate(username, email, password));
     }
     setError("");
+    const res = await login(username,email,password);
+    console.log(res)
   };
   return (
     <div className="login">

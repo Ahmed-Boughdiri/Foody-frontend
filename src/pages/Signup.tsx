@@ -2,14 +2,15 @@ import React, { useState } from "react";
 import "../layout/Login.css";
 import validate from "../global/Validate";
 import "../mobile/Register.css";
+import { register } from "../global/Auth";
 
-const SignUp = () => {
+const SignUp:React.FC<any> = ({ history }) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPAssword] = useState("");
   const [error, setError] = useState<any>("");
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async(e: any) => {
     e.preventDefault();
 
     if (validate(username, email, password)) {
@@ -18,10 +19,13 @@ const SignUp = () => {
       return setError("Your Password And Confirm Password Does Not Match");
     }
     setError("");
-    console.log(username);
-    console.log(email);
-    console.log(password);
-    console.log(confirmPassword);
+    const res = await register(username,email,password);
+    if(!res.error) {
+      history.push("/search");
+    } else {
+      setError(res.error)
+    }
+    console.log(res)
   };
   return (
     <div className="login">

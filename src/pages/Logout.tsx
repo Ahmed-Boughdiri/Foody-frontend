@@ -2,8 +2,13 @@ import React from "react";
 import "../layout/Logout.css";
 import SearchBar from "../components/SearchBar";
 import "../mobile/Logout.css";
+import { deleteToken } from "../global/SaveToken";
 
-const Logout = () => {
+const Logout:React.FC<any> = ({ history }) => {
+  const handleLogout = async() =>{
+    await deleteToken()
+    history.push("/")
+  }
   return (
     <div className="logout">
       <SearchBar />
@@ -18,7 +23,7 @@ const Logout = () => {
             eligendi excepturi animi eum dolorum dolorem quas? Quisquam ipsum,
             totam nihil repellat minima suscipit.
           </p>
-          <button>Logout</button>
+          <button onClick={handleLogout}>Logout</button>
         </div>
       </div>
     </div>

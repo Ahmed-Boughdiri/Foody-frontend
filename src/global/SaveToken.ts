@@ -5,8 +5,12 @@ export const getToken = (function() {
     return token
 })()
 
-export function saveToken(value:any) {
-    localStorage.setItem("Foody-app-token",value)
+export async function saveToken(value:any) {
+    await localStorage.setItem("Foody-app-token",value)
     return value;
+}
+
+export async function deleteToken() {
+    await localStorage.removeItem("Foody-app-token")
 }
 

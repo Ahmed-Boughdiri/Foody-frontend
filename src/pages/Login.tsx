@@ -2,25 +2,31 @@ import React, { useState } from "react";
 import "../layout/Login.css";
 import validate from "../global/Validate";
 import { login } from "../global/Auth";
+import { getToken } from "../global/SaveToken";
 
-const Login = () => {
+const Login:React.FC<any> = ({ history }) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<any>("");
-  const handleSubmit = async(e: any) => {
+  const handleRegister = async(e: any) => {
     e.preventDefault();
     if (validate(username, email, password)) {
       return setError(validate(username, email, password));
     }
     setError("");
     const res = await login(username,email,password);
-    console.log(res)
+    if(!res.error) {
+      history.push("/search")
+      console.log(getToken)
+    } else {
+      console.log(res.error)
+    }
   };
   return (
     <div className="login">
       <div className="wrapper">
-        <form className="form-signin" onSubmit={handleSubmit}>
+        <form className="form-signin" onSubmit={handleRegister}>
           <h2 className="form-signin-heading">Please login</h2>
           <input
             type="text"

@@ -5,7 +5,7 @@ export async function register(username:String,email:String,password:String) {
     const req = await Axios.post("/api/auth/register",{ username,email,password });
     const res = await req.data;
     if(req.status === 201) {
-        saveToken(res.token);
+        await saveToken(res.token);
         return res.token
     } else {
         return {
@@ -19,9 +19,23 @@ export async function login(username:String,email:String,password:String) {
     const res = await req.data;
     if(req.status === 400) {
         // Return An Error
-        return res
+        return {
+            error: res.error
+        }
     } else {
-        // Save The Access Token
+        await saveToken(res.token)
         return res.token
+    }
+}
+
+export async function loginWithToken(token:String){
+    const req = await Axios.post("/api/auth/token",{ token });
+    const res = await req.data;
+    if(req.status === 400) {
+        if(res.error === "Invalid") {
+            return false
+        }
+    } else {
+        return true
     }
 }
